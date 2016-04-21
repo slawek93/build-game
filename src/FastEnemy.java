@@ -6,7 +6,7 @@ public class FastEnemy extends GameObject{
 	
 	private Handler handler;
 
-	public FastEnemy(int x, int y, ID id, Handler handler) {
+	public FastEnemy(float x, float y, ID id, Handler handler) {
 		super(x, y, id);
 		
 		this.handler = handler;
@@ -16,7 +16,7 @@ public class FastEnemy extends GameObject{
 	}
 
 	public Rectangle getBounds(){
-		return new Rectangle(x, y, 16, 16);
+		return new Rectangle((int)x, (int)y, 16, 16);
 	}
 	
 	
@@ -33,7 +33,7 @@ public class FastEnemy extends GameObject{
 	
 	public void render(Graphics g) {
 		g.setColor(Color.blue);
-		g.fillRect(x, y, 16, 16);
+		g.fillRect((int)x, (int)y, 16, 16);
 		
 		
 	}
